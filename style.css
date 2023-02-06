@@ -98,7 +98,7 @@ body.theme3{
 
 
 .calculator {
-	background-color: var(--theme1-screen-background);
+	/* background-color: var(--theme1-screen-background); */
 	width: 100%;
 	max-width: 500px;
 	min-height: 600px;
@@ -120,6 +120,7 @@ body.theme3{
 
 
 .display {
+	background-color: var(--theme1-screen-background);
 	min-height: 50px;
 	padding: 1.5rem;
 	display: flex;
@@ -128,7 +129,9 @@ body.theme3{
 	color: var(--theme1-text-color);
 	text-align: right;
 	flex: 1 1 0%;
-	border-bottom: 20px solid var(--theme1-main-background);
+	margin-bottom: 20px;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
 }
 
 .calc #toggle {
@@ -266,7 +269,7 @@ body.theme3{
 .keys .key:hover{
 	cursor: pointer;
 	background-color: var(--theme1-whitekey-hover);
-	box-shadow: 0px 5px var(--theme1-whitekey-shadow);
+	/* box-shadow: 0px 5px var(--theme1-whitekey-shadow); */
 }
 
 .keys .operator:hover{
@@ -389,7 +392,7 @@ body.theme3{
    .legendText{
 	 display:inline-block;
 	 width:18px; 
-	 margin-top: 10px;
+	 margin-top: 5px;
 	 cursor:pointer; 
 	 user-select: none;
 	 position: relative;
@@ -425,6 +428,10 @@ body.theme3{
    transform: translateX(0px);
   }
 
+
+
+
+
   @media (max-width: 500px)  {
 	.app {
 		display: flex;
@@ -443,7 +450,6 @@ body.theme3{
 	}
 
 	.calculator {
-		background-color: var(--theme1-screen-background);
 		width: 100%;
 		max-width: 350px;
 		min-height: 500px;
@@ -463,9 +469,38 @@ body.theme3{
 		grid-gap: 1rem;
 		height: 450px;
 	}
+
+	.keys .key {
+		position: relative;
+		cursor: pointer;
+		display: block;
+		height: 0;
+		padding-top: 54%;
+		background-color: var(--theme1-whitekey);
+		border-radius: 0.4rem;
+		transition: 0.2s;
+		user-select: none;
+		box-shadow: 0px 5px var(--theme1-whitekey-shadow);
+	}
+
+	.key span{
+		position: absolute;
+		margin-top: 3.5px;
+	}
+
+	.keys .operator{
+		background-color: var(--theme1-bluekey-background);
+		box-shadow: 0px 5px var(--theme1-bluekey-shadow);
+	}
+	
+	.keys .operator:hover{	
+		background-color: var(--theme1-bluekey-hover);
+	}
+
+	
   }
 
-
+/* 
   @media (min-width: 500px) and (max-width: 1024px){
 
-  }
+  } */
